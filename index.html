@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sansara</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <link rel="preload" href="fonts/commissioner_cyrillic-latin_200.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <link rel="preload" href="fonts/commissioner_cyrillic-latin_300.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <link rel="preload" href="fonts/commissioner_cyrillic-latin_400.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <link rel="preload" href="fonts/commissioner_cyrillic-latin_500.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <style media="all">
+    @font-face {
+      font-display: swap;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 200;
+      src: url("fonts/commissioner_cyrillic-latin_200.woff2") format('woff2');
+      text-rendering: optimizeLegibility;
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 300;
+      src: url("fonts/commissioner_cyrillic-latin_300.woff2") format('woff2');
+      text-rendering: optimizeLegibility;
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 400;
+      src: url("fonts/commissioner_cyrillic-latin_400.woff2") format('woff2');
+      text-rendering: optimizeLegibility;
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      src: url("fonts/commissioner_cyrillic-latin_500.woff2") format('woff2');
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+  <header class="header bg-fafafa">
+    <div class="wrapper">
+      <a href="/" class="logo">
+        <img width="36" height="36" src="https://san-sara.ru/assets/images/logo72.png" alt="">
+        <span>SANSARA</span>
+      </a>
+      <a href="#" class="menu-hamburger">
+        <svg class="menu-hamburger__icon menu-hamburger__icon_open" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 12H20M4 5H18M4 19H16" stroke="#3F3F46" stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+        <svg class="menu-hamburger__icon menu-hamburger__icon_close" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L12 12M18 18L12 12M12 12L18 6M12 12L6 18" stroke="white" stroke-width="1.8"
+            stroke-linecap="round"></path>
+        </svg>
+        <span>меню</span>
+      </a>
+      <nav class="nav">
+        <span class="nav__close">
+          меню
+        </span>
+        <ul class="menu">
+          <li class="menu__item"><a href="experts" class="menu__link">эксперты</a>
+          </li>
+          <li class="menu__item"><a href="services" class="menu__link">услуги</a></li>
+          <li class="menu__item"><a href="articles" class="menu__link">статьи</a></li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link_icon search-modal-open">
+              <svg class="menu__icon menu__icon_desktop" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 19L15.8828 15.8828M15.8828 15.8828C17.0365 14.7292 17.75 13.1354 17.75 11.375C17.75 7.85418 14.8958 5 11.375 5C7.85418 5 5 7.85418 5 11.375C5 14.8958 7.85418 17.75 11.375 17.75C13.1354 17.75 14.7292 17.0365 15.8828 15.8828Z"
+                  stroke="#3F3F46" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              <svg class="menu__icon menu__icon_mobile" width="23" height="23" viewBox="0 0 23 23"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 21L16.7432 16.7432M16.7432 16.7432C18.3061 15.1803 19.2727 13.0212 19.2727 10.6364C19.2727 5.86663 15.4061 2 10.6364 2C5.86663 2 2 5.86663 2 10.6364C2 15.4061 5.86663 19.2727 10.6364 19.2727C13.0212 19.2727 15.1803 18.3061 16.7432 16.7432Z"
+                  stroke="white" stroke-width="2.5" stroke-linecap="round"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="cabinet" class="menu__link">
+              войти
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-block-end: 12.5rem;">
+    <div class="bg-fafafa">
+      <div class="wrapper">
+        <section class="promo">
+          <h1 class="promo__title">
+            Сервис консультаций экспертов
+          </h1>
+          <ul class="promo__speciality">
+            <li>астрологи</li>
+            <li>энергопрактики</li>
+            <li>тарологи</li>
+            <li>нумерологи и&nbsp;др.</li>
+          </ul>
+          <div class="promo__cta">
+            <p class="promo__cta-label">
+              <svg class="promo__cta-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                  d="M19 10C13.6 10.6 10.6 13.6 10 19C9.4 13.6 6.4 10.6 1 10C6.4 9.4 9.4 6.4 10 1C10.6 6.4 13.6 9.4 19 10Z"
+                  fill="currentColor" />
+              </svg>
+              Подберем эксперта<br>
+              специально для&nbsp;вас
+            </p>
+            <button class="button-primary button-primary_s-m promo__cta-btn">
+              Подобрать
+            </button>
+          </div>
+          <ul class="promo__about">
+            <li class="promo__about-item">
+              <span class="promo__about-number">
+                28
+              </span>
+              <span class="promo__about-text">
+                проверенных экспертов
+              </span>
+            </li>
+            <li class="promo__about-item">
+              <span class="promo__about-number">
+                2145
+              </span>
+              <span class="promo__about-text">
+                заказаных услуг
+              </span>
+            </li>
+          </ul>
+          <div class="promo__chat" aria-hidden="true">
+            <div class="chat-unit">
+              <div class="chat-unit__item chat-unit__item--left chat-unit__item--animated">
+                <img class="avatar-one avatar-one--m chat-unit__user"
+                  src="/assets/images/avatars/avatar-3.jpg" width="182" height="182"
+                  alt="Аватар клиента">
+                <div class="chat-unit__bubble">
+                  <p class="chat-unit__bubble-text">
+                    Мне почти 40&nbsp;лет, а&nbsp;я&nbsp;все еще одна, что&nbsp;бы я ни&nbsp;делала,
+                    хотя очень хочу семью и&nbsp;детей. Со&nbsp;мной что&zwj;-&zwj;то не&nbsp;так?
+                  </p>
+                  <svg class="chat-unit__bubble-tail" width="16" height="26" viewBox="0 0 16 26"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 23.6112C3.88159 25.133 11 26.5 15 20.8447L7 1C7 7.85304 8 21.8447 1 23.6112Z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <div class="chat-unit__item chat-unit__item--right chat-unit__item--animated">
+                <img class="avatar-one avatar-one--m chat-unit__user"
+                  src="/assets/images/avatars/avatar-4.jpg" width="182" height="182"
+                  alt="Аватар эксперта">
+                <div class="chat-unit__bubble">
+                  <p class="chat-unit__bubble-text">
+                    Уверена, с&nbsp;вами все в&nbsp;порядке. Не&nbsp;волнуйтесь&nbsp;— вместе
+                    мы&nbsp;обязательно найдем истинную причину происходящего
+                  </p>
+                  <svg class="chat-unit__bubble-tail" width="16" height="26" viewBox="0 0 16 26"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15 23.6112C12.1184 25.133 5 26.5 1 20.8447L9 1C9 7.85304 8 21.8447 15 23.6112Z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="bg-fafafa" id="experts">
+      <div class="wrapper" data-main-experts-outer="">
+        <section class="grid-one showcase-one" data-main-experts-listing="">
+          <!-- <header class="grid__item grid__item_about"> -->
+          <header class="showcase-one_caption caption-one caption-one--one">
+            <!-- <h2>
+              <a href="experts" class="grid__title">
+                Эксперты
+              </a>
+            </h2> -->
+            <h2 class="caption-one_title">
+              Лучшие эксперты разных специальностей помогут решить любой ваш&nbsp;вопрос
+            </h2>
+            <nav class="caption-one_summary">
+              <!-- <ul class="grid__links"> -->
+              <ul class="caption-one_summary-list">
+                <li><a class="link-one link-one_s" href="/experts?direction=1">Нумерология</a></li>
+                <li><a class="link-one link-one_s" href="/experts?direction=3">Астрология</a></li>
+                <li><a class="link-one link-one_s" href="/experts?direction=4">Хиромантия</a></li>
+                <li><a class="link-one link-one_s" href="/experts?direction=6">Энергопрактика</a>
+                </li>
+                <li><a class="link-one link-one_s" href="/experts?direction=8">Целительство</a></li>
+                <li><a class="link-one link-one_s" href="/experts?direction=7">Другое</a></li>
+              </ul>
+            </nav>
+          </header>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/124/avatar/360.webp, storage/uploads/experts/public/124/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/124/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/124/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Татьяна Золотухина">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <div class="card-expert-one_wrap">
+                    <h3 class="card-expert-one_title">
+                      Татьяна Золотухина
+                    </h3>
+                  </div>
+                  <span class="tooltip-one card-expert-one_wrap-fav">
+                    <button class="checked-one checked-one--size-s" aria-labelledby="tooltip-fav">
+                      <svg class="checked-one_icon" width="20" height="20" viewBox="0 0 20 20"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.99998 18.9473C14.9415 18.9473 18.9473 14.9415 18.9473 9.99998C18.9473 5.05849 14.9415 1.05261 9.99998 1.05261C5.05849 1.05261 1.05261 5.05849 1.05261 9.99998C1.05261 14.9415 5.05849 18.9473 9.99998 18.9473ZM4.71998 10.99L5.81998 9.85998L8.33998 12.32L13.59 5.81998L14.81 6.80998L8.47998 14.65L4.71998 10.99Z"
+                          fill="currentColor" />
+                      </svg>
+                    </button>
+                    <!-- <span class="tooltip-one_txt" role="tooltip" id="tooltip-fav">
+                      <span class="visually-hidden">Тултип: </span>
+                      текст текст текст
+                    </span> -->
+                  </span>
+                </div>
+                <p class="card-expert-one_profile">
+                  Таролог, матрицолог, нумеролог, матрицолог, нумеролог
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  В&nbsp;процессе работы придет четкое понимание решения проблемы четкое понимание
+                  решения проблемы
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      4.9
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      120
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">45 лет</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      2500
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/125/avatar/360.webp, storage/uploads/experts/public/125/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/125/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/125/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Сиана">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <h3 class="card-expert-one_title">
+                    Сиана
+                  </h3>
+                  <span class="tooltip-one card-expert-one_wrap-fav">
+                    <button class="checked-one checked-one--size-s" aria-labelledby="tooltip-fav">
+                      <svg class="checked-one_icon" width="20" height="20" viewBox="0 0 20 20"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.99998 18.9473C14.9415 18.9473 18.9473 14.9415 18.9473 9.99998C18.9473 5.05849 14.9415 1.05261 9.99998 1.05261C5.05849 1.05261 1.05261 5.05849 1.05261 9.99998C1.05261 14.9415 5.05849 18.9473 9.99998 18.9473ZM4.71998 10.99L5.81998 9.85998L8.33998 12.32L13.59 5.81998L14.81 6.80998L8.47998 14.65L4.71998 10.99Z"
+                          fill="currentColor" />
+                      </svg>
+                    </button>
+                    <!-- <span class="tooltip-one_txt" role="tooltip" id="tooltip-fav">
+                      <span class="visually-hidden">Тултип: </span>
+                      текст текст текст
+                    </span> -->
+                  </span>
+                </div>
+                <p class="card-expert-one_profile">
+                  Матрицолог, нумеролог
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  Помогаю освободить от&nbsp;страхов, негативных установок и&nbsp;исцелить свои
+                  энергетические и&nbsp;физическое тела
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      4.8
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      20
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">1 год</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      3000
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/126/avatar/360.webp, storage/uploads/experts/public/126/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/126/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/126/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Ирина Александровна">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <h3 class="card-expert-one_title">
+                    Ирина Александровна
+                  </h3>
+                </div>
+                <p class="card-expert-one_profile">
+                  Астролог, мастер рейки
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  Откройте тайны своей личности с&nbsp;помощью астролога. Узнайте, как звезды могут
+                  повлиять на&nbsp;вашу жизнь
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      5
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      1.6k
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">3 года</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      15 000
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/124/avatar/360.webp, storage/uploads/experts/public/124/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/124/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/124/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Татьяна Золотухина">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <h3 class="card-expert-one_title">
+                    Татьяна Золотухина
+                  </h3>
+                </div>
+                <p class="card-expert-one_profile">
+                  Таролог, матрицолог, нумеролог, матрицолог, нумеролог
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  В&nbsp;процессе работы придет четкое понимание решения проблемы четкое понимание
+                  решения проблемы
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      4.9
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      120
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">45 лет</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      2500
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/125/avatar/360.webp, storage/uploads/experts/public/125/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/125/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/125/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Сиана">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <h3 class="card-expert-one_title">
+                    Сиана
+                  </h3>
+                </div>
+                <p class="card-expert-one_profile">
+                  Матрицолог, нумеролог
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  Помогаю освободить от&nbsp;страхов, негативных установок и&nbsp;исцелить свои
+                  энергетические и&nbsp;физическое тела
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      4.8
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      20
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">1 год</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      3000
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/126/avatar/360.webp, storage/uploads/experts/public/126/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/126/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/126/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Ирина Александровна">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <h3 class="card-expert-one_title">
+                    Ирина Александровна
+                  </h3>
+                </div>
+                <p class="card-expert-one_profile">
+                  Астролог, мастер рейки
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  Откройте тайны своей личности с&nbsp;помощью астролога. Узнайте, как звезды могут
+                  повлиять на&nbsp;вашу жизнь
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      5
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      1.6k
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">3 года</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      15 000
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+          <article class="card-expert-one" data-main-experts-item="" data-upload-item=""
+            data-order-service-outer="">
+            <a class="card-expert-one_avatar" href="#"
+              aria-label="Страница эксперта Татьяна Золотухина">
+              <picture aria-hidden="true">
+                <source
+                  srcset="storage/uploads/experts/public/124/avatar/360.webp, storage/uploads/experts/public/124/avatar/360@2x.webp 2x"
+                  type="image/webp">
+                <img src="storage/uploads/experts/public/124/avatar/360.jpg"
+                  srcset="storage/uploads/experts/public/124/avatar/360@2x.jpg 2x" width="360"
+                  height="360" alt="Эксперт сервиса Сансара Татьяна Золотухина">
+              </picture>
+            </a>
+            <div class="card-expert-one_main">
+              <div class="card-expert-one_main-top">
+                <div class="card-expert-one_wrap">
+                  <h3 class="card-expert-one_title">
+                    <span>Татьяна Золотухина</span>
+                  </h3>
+                </div>
+                <p class="card-expert-one_profile">
+                  Таролог, матрицолог, нумеролог, матрицолог, нумеролог
+                </p>
+                <p class="card-expert-one_description" aria-hidden="true">
+                  В&nbsp;процессе работы придет четкое понимание решения проблемы четкое понимание
+                  решения проблемы
+                </p>
+              </div>
+              <div class="card-expert-one_main-bottom">
+                <div class="card-expert-one_meta">
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value factoid-one_value--one" aria-label="Рейтинг">
+                      4.9
+                      <svg class="factoid-one_icon" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M8 1L9.5716 5.83688H14.6574L10.5429 8.82624L12.1145 13.6631L8 10.6738L3.8855 13.6631L5.4571 8.82624L1.3426 5.83688H6.4284L8 1Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="factoid-one_label" aria-label="Оценок">
+                      120
+                      <span aria-hidden="true">оц.</span>
+                    </span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value">45 лет</span>
+                    <span class="factoid-one_label">опыта</span>
+                  </div>
+                  <div class="factoid-one card-expert-one_meta-factoid">
+                    <span class="factoid-one_value" aria-label="Рублей">
+                      2500
+                      <span aria-hidden="true">₽</span>
+                    </span>
+                    <span class="factoid-one_label">за сеанс</span>
+                  </div>
+                </div>
+                <button
+                  class="button-primary button-primary_s card-expert-one_btn">записаться</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>
