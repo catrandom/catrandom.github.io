@@ -103,22 +103,45 @@
 }
 
 .link-one_s {
-    font-size: 19px;
-    line-height: 126%;
+    font-size: var(--typo-s-fs);
+    line-height: normal;
     font-weight: 500;
 }
 
 .button-one {
-    --_size: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    block-size: var(--_size);
+    border: 0.0625rem solid var(--ui-gray-150);
+    border-block-end-width: 0;
+    border-radius: var(--_self-size);
+    background-color: white;
+    block-size: var(--_self-size);
+    text-transform: lowercase;
     font-family: inherit;
-    font-size: var(--typo-xs-fs);
+    font-size: var(--_typo-size);
     line-height: normal;
-    font-weight: 500;
+    font-weight: var(--_typo-weight);
     color: var(--ui-gray-700);
-    padding-inline: .5rem;
-    border-radius: var(--_size);
+    padding-inline: var(--_pad-inline);
+    box-shadow: 0 0.0625rem 0 var(--ui-gray-300);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button-one:hover {
+        background-color: var(--ui-gray-100);
+    }
+}
+
+.button-one--size-s {
+    --_self-size: 2.25rem;
+    --_typo-size: var(--typo-xs-fs);
+    --_typo-weight: 500;
+    --_pad-inline: 1rem;
+}
+
+.button-one--size-s .button-one_icon {
+    margin-inline-start: -0.25rem;
+    height: auto;
+    inline-size: 1.5rem;
 }
