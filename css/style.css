@@ -223,29 +223,32 @@ body {
 .logo {
     z-index: 2;
     position: relative;
-    display: flex;
-    align-items: center;
+    font-size: 0;
 }
 
-.logo img {
-    margin-right: 2px;
+.logo {
+    inline-size: var(--self-size);
 }
 
-.logo span {
-    position: relative;
-    top: -2px;
-    letter-spacing: -0.03em;
-    font-size: 26px;
-    font-weight: 500;
-    color: var(--ui-gray-700);
+.logo--size-s {
+    --self-size: 8rem;
 }
 
-.logo_white span {
-    color: white;
+.logo--size-m {
+    --self-size: 12rem;
+}
+
+.logo svg {
+    block-size: auto;
+    inline-size: 100%;
 }
 
 .logo .label {
-  fill: var(--ui-gray-700);
+    fill: var(--ui-gray-700);
+}
+
+.logo--type-inverse .label {
+    fill: white;
 }
 
 /* layout */
