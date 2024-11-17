@@ -18,6 +18,10 @@
     }
 }
 
+/* .button-primary span {
+    text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, .7);
+} */
+
 .button-primary_s {
     height: 3rem;
     font-size: var(--typo-s-fs);
