@@ -79,9 +79,9 @@
 
 .link-one {
     border-bottom: 2px solid #ffd409;
+    margin-right: 5px;
     padding-bottom: 1px;
     color: var(--ui-gray-700);
-    margin-right: 5px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -106,4 +106,19 @@
     font-size: 19px;
     line-height: 126%;
     font-weight: 500;
+}
+
+.button-one {
+    --_size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: var(--_size);
+    font-family: inherit;
+    font-size: var(--typo-xs-fs);
+    line-height: normal;
+    font-weight: 500;
+    color: var(--ui-gray-700);
+    padding-inline: .5rem;
+    border-radius: var(--_size);
 }
