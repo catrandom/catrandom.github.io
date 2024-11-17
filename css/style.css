@@ -698,7 +698,9 @@ body {
 
 .menu__link {
     display: flex;
-    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    border: 0.0625rem solid transparent;
     border-radius: var(--bdrs-8);
     block-size: 2.25rem;
     text-transform: lowercase;
@@ -707,6 +709,7 @@ body {
     line-height: normal;
     font-weight: 500;
     color: var(--ui-gray-700);
+    padding-inline: 0.75rem;
 }
 
 .menu__link_icon {
