@@ -756,7 +756,7 @@ body {
         grid-template-rows: max-content auto auto;
         background:
             left top / 75rem auto no-repeat url("/assets/images/promo_bg.png?v4"),
-            radial-gradient(circle at top left, hsl(289, 82%, 27%) 50%, hsl(289, 82%, 33%));
+            radial-gradient(circle at top left, var(--primary-550) 50%, var(--primary-400));
         /* grid-auto-rows: max-content; */
         /* min-block-size: 33.125rem; */
         gap: 2rem 1.5rem;
