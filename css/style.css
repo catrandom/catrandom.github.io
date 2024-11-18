@@ -957,6 +957,9 @@ body {
         line-height: 2rem;
         font-weight: 400;
         grid-column: 10 / -1;
+        background-image: linear-gradient(white 50%, var(--primary-500));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
