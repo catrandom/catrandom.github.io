@@ -251,6 +251,22 @@ body {
     fill: white;
 }
 
+.bg-fafafa {
+    background: var(--ui-gray-50) !important;
+}
+
+.bg-ffffff {
+    background: white !important;
+}
+
+.bg-f7f7f7 {
+    background: #f7f7f7 !important;
+}
+
+.bg-ffffff-fafafa {
+    background: linear-gradient(180deg, white 66%, var(--ui-gray-50) 100%) !important;
+}
+
 /* layout */
 .grid-one {
     display: grid;
@@ -594,13 +610,18 @@ body {
 
 .card-one_body-wrap--type-three {
     flex-wrap: wrap;
-    min-block-size: 2.75rem;
     column-gap: 0.5rem;
 }
 
 .card-one_body-wrap--type-four {
     flex-wrap: wrap;
     margin-block-start: 0.25rem;
+    column-gap: 0.5rem;
+}
+
+.card-one_body-wrap--type-four {
+    flex-wrap: wrap;
+    min-block-size: 2.75rem;
     column-gap: 0.5rem;
 }
 
@@ -739,7 +760,6 @@ body {
     position: relative;
     text-decoration: none;
 }
-
 /* block — end */
 .menu {
     display: flex;
@@ -786,12 +806,12 @@ body {
     border-color: white;
 }
 
-.promo {
+.showcase-one {
     position: relative;
 }
 
 @media (width <=767px) {
-    .promo {
+    .showcase-one {
         background:
             left top / 47.5rem auto no-repeat url("/assets/images/promo_bg.png?v4"),
             radial-gradient(circle at 40% 0%, rgb(156, 52, 180) 25%, rgb(104, 12, 125) 84%);
@@ -815,22 +835,6 @@ body {
         padding-inline: 2rem;
         clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0% 100%);
     }
-}
-
-.bg-fafafa {
-    background: var(--ui-gray-50) !important;
-}
-
-.bg-ffffff {
-    background: white !important;
-}
-
-.bg-f7f7f7 {
-    background: #f7f7f7 !important;
-}
-
-.bg-ffffff-fafafa {
-    background: linear-gradient(180deg, white 66%, var(--ui-gray-50) 100%) !important;
 }
 
 .promo_title {
@@ -2577,10 +2581,6 @@ body {
         margin-top: 56px;
     }
 
-    .promo_top {
-        flex-direction: column;
-    }
-
     .videos__content {
         max-width: unset;
     }
@@ -2891,11 +2891,6 @@ body {
         margin-bottom: 0;
     }
 
-    .promo_places {
-        font-size: 16px;
-        line-height: 125%;
-    }
-
     .menu-hamburger {
         display: flex;
     }
@@ -3027,11 +3022,6 @@ body {
         padding: 0;
     }
 
-    .promo_places {
-        margin-left: 7px;
-        max-width: 160px;
-    }
-
     .videos__list .videos__video {
         order: 1;
     }
@@ -3053,12 +3043,6 @@ body {
 
     .article .wrapper {
         padding: 32px 12px 0 12px;
-    }
-
-    .promo_places {
-        position: absolute;
-        top: 32px;
-        right: 23px;
     }
 
     .promo {
