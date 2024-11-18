@@ -522,6 +522,7 @@ body {
     justify-content: space-between;
     block-size: 100%;
     padding: 1rem 0.75rem 1.25rem;
+    min-block-size: 15.5rem;
 }
 
 .card-one_title {
