@@ -806,12 +806,12 @@ body {
     border-color: white;
 }
 
-.showcase-one {
+.promo {
     position: relative;
 }
 
 @media (width <=767px) {
-    .showcase-one {
+    .promo {
         background:
             left top / 47.5rem auto no-repeat url("/assets/images/promo_bg.png?v4"),
             radial-gradient(circle at 40% 0%, rgb(156, 52, 180) 25%, rgb(104, 12, 125) 84%);
