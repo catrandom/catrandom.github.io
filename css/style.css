@@ -953,12 +953,13 @@ body {
 @media (width >=768px) {
     .showcase-one_speciality {
         margin-block-start: -0.75rem;
+        background-image: linear-gradient(170deg, white 40%, var(--primary-500));
+        -webkit-background-clip: text;
+        letter-spacing: -.02em;
         font-size: var(--typo-l-fs);
         line-height: 2rem;
         font-weight: 400;
         grid-column: 10 / -1;
-        background-image: linear-gradient(white 50%, var(--primary-500));
-        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
