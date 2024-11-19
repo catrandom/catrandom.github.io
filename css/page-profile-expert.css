@@ -1,0 +1,63 @@
+/* block */
+.showcase-two {
+  position: relative;
+}
+
+@media (width <=767px) {
+  .showcase-two {
+    background:
+      left top / 100% auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
+      linear-gradient(150deg, var(--primary-550) 50%, var(--primary-400));
+    padding-block: 2rem 2rem;
+    padding-inline: 0.75rem;
+    clip-path: polygon(0 0, 100% 0, calc(100% - var(--layout-wrap-pad-inline-phone)) 100%, 0% 100%);
+  }
+
+  .showcase-two--fit-one {
+    margin-inline: calc(var(--layout-wrap-pad-inline-phone) * -1);
+  }
+}
+
+@media (width >=768px) {
+  .showcase-two {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: max-content auto auto;
+    background:
+      left top / 75rem auto no-repeat url("/assets/images/showcase-bg-one_desktop.png?v4"),
+      radial-gradient(circle at top left, var(--primary-550) 50%, var(--primary-400));
+    /* grid-auto-rows: max-content; */
+    /* min-block-size: 33.125rem; */
+    gap: 2.25rem 1.5rem;
+    padding-block: 1.5rem 2rem;
+    padding-inline: 2rem;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0% 100%);
+  }
+}
+
+.showcase-two_title {
+  color: white;
+}
+
+@media (width <=767px) {
+  .showcase-two_title {
+    letter-spacing: -.04em;
+    /* margin-bottom: 0.75rem; */
+    font-size: var(--typo-3xl-fs);
+    line-height: 3.25rem;
+    font-weight: 300;
+  }
+}
+
+@media (width >=768px) {
+  .showcase-two_title {
+    letter-spacing: -.05em;
+    font-size: var(--typo-5xl-fs);
+    line-height: 4.75rem;
+    font-weight: 200;
+    grid-area: 1 / 1 / 2 / span 9;
+    align-self: end;
+  }
+}
+
+/* block — end */
