@@ -44,6 +44,16 @@
   --ui-green-200: #bbf7d0;
   --ui-green-100: #dcfce7;
   --ui-green-50: #f0fdf4;
+  --ui-social-tw: #1da1f2;
+  --ui-social-fb: #3b5998;
+  --ui-social-yt: red;
+  --ui-social-ok: #ee8208;
+  --ui-social-vk: #2787f5;
+  --ui-social-mir: #005ff9;
+  --ui-social-skype: #0078ca;
+  --ui-social-tlg: #0084C6;
+  --ui-social-wtsp: #03b55c;
+  --ui-social-viber: #574e92;
   --primary-50: #fafafa;
   --primary-100: #f0d3df;
   --primary-150: #e1b0ca;
@@ -63,7 +73,6 @@
   --accent-200: #ffe671;
   --accent-300: #f5d747;
   --modal-fill: white;
-  --ui-overlay-one: rgba(24, 24, 27, 0.96);
   --font-family: "Commissioner", sans-serif;
   --rem-in-px: .0625rem;
   --typo-2xs-fs: calc(13*var(--rem-in-px));
@@ -151,8 +160,9 @@
   --shadow-one-2xl: 0 1.5625rem 3.125rem -.75rem rgba(0, 0, 0, 0.251);
   --theme-clip-path-one: url("data:image/svg+xml,%3Csvg width='114' height='114' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.51 35.81c2.02-15.22 4.04-19.8 8.77-24.53C16 6.55 20.59 4.53 35.8 2.5a149.08 149.08 0 0 1 42.38 0c15.22 2.02 19.8 4.04 24.53 8.77 4.73 4.73 6.75 9.31 8.77 24.53a149.08 149.08 0 0 1 0 42.38c-2.02 15.22-4.04 19.8-8.77 24.53-4.73 4.73-9.31 6.75-24.53 8.77a149.08 149.08 0 0 1-42.38 0c-15.22-2.02-19.8-4.04-24.53-8.77C6.55 98 4.53 93.41 2.5 78.2a149.08 149.08 0 0 1 0-42.38Z'/%3E%3C/svg%3E");
   --hover-fade-m: hsla(0, 0%, 10%, .1);
-  --layout-wrap-pad-inline-phone: 0.75rem;
-  --layout-wrap-pad-inline-desktop: 1.25rem;
+  --ui-overlay-one: rgba(24, 24, 27, 0.96);
+  --layout_wrap-pad-inline-phone: 0.75rem;
+  --layout_wrap-pad-inline-desktop: 1.25rem;
 }
 
 * {
@@ -185,6 +195,14 @@
   clip: rect(0 0 0 0);
 }
 
+.line-clamp {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: var(--_clamp-amount);
+  -webkit-box-orient: vertical;
+}
+
 a {
   text-decoration: none;
 }
@@ -212,7 +230,7 @@ body {
 
 @media (width <=767px) {
   .wrapper {
-    padding-inline: var(--layout-wrap-pad-inline-phone);
+    padding-inline: var(--layout_wrap-pad-inline-phone);
   }
 }
 
@@ -220,7 +238,7 @@ body {
   .wrapper {
     max-width: 74rem;
     margin-inline: auto;
-    padding-inline: var(--layout-wrap-pad-inline-desktop);
+    padding-inline: var(--layout_wrap-pad-inline-desktop);
   }
 }
 
@@ -284,6 +302,7 @@ body {
 /* layout — end */
 /* block */
 .marker-one {
+  --_clip-path-pad: 0.125rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,15 +315,15 @@ body {
   clip-path: polygon(0 0, 100% 0, calc(100% - var(--_clip-path-pad)) 100%, 0% 100%);
 }
 
-.marker-one--fit-online {
+.marker-one--theme-online {
   --_bg-fill: linear-gradient(to right, var(--ui-green-800) 50%, var(--ui-green-700));
 }
 
-.marker-one--offline {
+.marker-one--theme-offline {
   --_bg-fill: linear-gradient(to right, var(--ui-gray-600) 50%, var(--ui-gray-500));
 }
 
-.marker-one--fit-vip {
+.marker-one--theme-vip {
   --_bg-fill: linear-gradient(to right, #bf740a 50%, #d88614);
 }
 
@@ -313,15 +332,15 @@ body {
   --_pad-inline: 0.5rem .75rem;
   --_typo-size: var(--typo-xs-fs);
   --_typo-weight: 400;
-  --_clip-path-pad: 0.125rem;
   padding-block-end: 0.25rem;
 }
 
-.marker-one--size-s + .marker-one--size-s {
+.marker-one--size-s + .marker-one--size-s,
+.marker-one--size-s-m + .marker-one--size-s-m {
   margin-inline-end: calc(var(--_clip-path-pad) * -1);
 }
 
-.marker-one--size-s:is(.marker-one--fit-vip) {
+.marker-one--size-s:is(.marker-one--theme-vip) {
   --_typo-size: var(--typo-2xs-fs);
   --_typo-weight: 500;
   padding-block-end: 0;
@@ -331,22 +350,28 @@ body {
 @media (width <=767px) {
   .marker-one--size-s-m {
     --_self-size: 1.5rem;
-    --_pad-inline: .5rem;
+    --_pad-inline: 0.5rem .75rem;
     --_typo-size: var(--typo-xs-fs);
     --_typo-weight: 400;
-    --_clip-path-pad: 0.125rem;
     padding-block-end: 0.25rem;
   }
 }
 
 @media (width >=768px) {
   .marker-one--size-s-m {
-    --_self-size: 1.5rem;
-    --_pad-inline: .5rem;
-    --_typo-size: var(--typo-xs-fs);
+    --_self-size: 2rem;
+    --_pad-inline: 0.75rem 1rem;
+    --_typo-size: var(--typo-m-fs);
     --_typo-weight: 400;
-    --_clip-path-pad: 0.125rem;
     padding-block-end: 0.25rem;
+    letter-spacing: -.02em;
+  }
+
+  .marker-one--size-s-m:is(.marker-one--theme-vip) {
+    --_typo-size: var(--typo-s-fs);
+    --_typo-weight: 500;
+    padding-block-end: 0;
+    text-transform: uppercase;
   }
 }
 
@@ -552,23 +577,21 @@ body {
 }
 
 .card-one_title {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  --_clamp-amount: 1;
   font-size: var(--typo-m-fs);
   line-height: 1.75rem;
   font-weight: 500;
   color: var(--ui-gray-700);
-  -webkit-box-orient: vertical;
 }
 
-.card-one_title--fit-one {
+.card-one_title--fit-1 {
+  /* line clamp fix */
+  display: block;
   white-space: nowrap;
-  -webkit-line-clamp: 1;
 }
 
-.card-one_title--fit-two {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
+.card-one_title--fit-2 {
+  --_clamp-amount: 2;
 }
 
 .card-one_real {
@@ -576,27 +599,18 @@ body {
 }
 
 .card-one_add {
-  /* display: -webkit-box; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  --_clamp-amount: 1;
   font-size: var(--typo-xs-fs);
   line-height: var(--typo-xs-lh-l);
   font-weight: 500;
   color: var(--ui-gray-700);
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 
-.card-one_description {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.card-one_slogan {
+  --_clamp-amount: 2;
   font-size: var(--typo-xs-fs);
   line-height: var(--typo-xs-lh-s);
   color: var(--ui-gray-650);
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 .card-one_body-end {
@@ -610,35 +624,29 @@ body {
   align-items: center;
 }
 
-.card-one_body-wrap--fit-one {
+.card-one_body-wrap--fit-1 {
   column-gap: 0.25rem;
 }
 
-.card-one_body-wrap--fit-two {
+.card-one_body-wrap--fit-2 {
   flex-wrap: wrap;
   margin-block-start: 0.5rem;
   min-block-size: 2.75rem;
   column-gap: 0.75rem;
 }
 
-.card-one_body-wrap--fit-three {
+.card-one_body-wrap--fit-3 {
   flex-wrap: wrap;
   column-gap: 0.5rem;
 }
 
-.card-one_body-wrap--fit-four {
-  flex-wrap: wrap;
-  margin-block-start: 0.25rem;
-  column-gap: 0.5rem;
-}
-
-.card-one_body-wrap--fit-four {
+.card-one_body-wrap--fit-4 {
   flex-wrap: wrap;
   min-block-size: 2.75rem;
   column-gap: 0.5rem;
 }
 
-.card-one_body-wrap--fit-five {
+.card-one_body-wrap--fit-5 {
   flex-wrap: wrap;
   margin-block-start: 0.25rem;
   column-gap: 0.5rem;
