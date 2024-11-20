@@ -27,7 +27,7 @@
       left top / 75rem auto no-repeat url("/assets/images/showcase-bg-one_desktop.png?v4"),
       radial-gradient(circle at top left, var(--primary-550) 50%, var(--primary-400));
     /* grid-auto-rows: max-content; */
-    /* min-block-size: 33.125rem; */
+    min-block-size: 31.25rem;
     gap: 2.25rem 1.5rem;
     padding-block: 1.5rem 2rem;
     padding-inline: 2rem;
@@ -44,7 +44,7 @@
     letter-spacing: -.04em;
     /* margin-bottom: 0.75rem; */
     font-size: var(--typo-3xl-fs);
-    line-height: 3.25rem;
+    line-height: 3rem;
     font-weight: 300;
   }
 }
@@ -207,7 +207,7 @@
 .showcase-one_features-item {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   color: white;
   column-gap: 0.5rem;
@@ -231,12 +231,14 @@
 @media (width >=768px) {
   .showcase-one_features-number {
     letter-spacing: -0.05em;
-    font-size: var(--typo-4xl-fs);
+    font-size: var(--typo-5xl-fs);
     line-height: normal;
     font-weight: 200;
   }
 
   .showcase-one_features-text {
+    display: block;
+    padding-block-start: 0.5rem;
     font-size: var(--typo-m-fs);
     line-height: 1.5rem;
     font-weight: 400;
