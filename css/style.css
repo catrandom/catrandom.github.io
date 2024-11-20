@@ -323,7 +323,7 @@ body {
   --_bg-fill: linear-gradient(to right, var(--ui-gray-600) 50%, var(--ui-gray-500));
 }
 
-.marker-one--theme-vip {
+.marker-one--theme-accent {
   --_bg-fill: linear-gradient(to right, #bf740a 50%, #d88614);
 }
 
@@ -340,7 +340,7 @@ body {
   margin-inline-end: calc(var(--_clip-path-pad) * -1);
 }
 
-.marker-one--size-s:is(.marker-one--theme-vip) {
+.marker-one--size-s:is(.marker-one--theme-accent) {
   --_typo-size: var(--typo-2xs-fs);
   --_typo-weight: 500;
   padding-block-end: 0;
@@ -367,7 +367,7 @@ body {
     letter-spacing: -.02em;
   }
 
-  .marker-one--size-s-m:is(.marker-one--theme-vip) {
+  .marker-one--size-s-m:is(.marker-one--theme-accent) {
     --_typo-size: var(--typo-s-fs);
     --_typo-weight: 500;
     padding-block-end: 0;
