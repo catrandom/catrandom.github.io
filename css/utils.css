@@ -30,6 +30,7 @@
 
 .button-primary_m {
     height: 3.5rem;
+    letter-spacing: -0.02em;
     font-size: var(--typo-m-fs);
     padding-inline: 1.5rem;
 }
@@ -45,6 +46,7 @@
 @media (width >=768px) {
     .button-primary_s-m {
         height: 3.5rem;
+        letter-spacing: -0.02em;
         font-size: var(--typo-m-fs);
         padding-inline: 1.5rem;
     }
@@ -117,7 +119,6 @@
     justify-content: center;
     align-items: center;
     border: 0.0625rem solid var(--ui-gray-150);
-    border-block-end-width: 0;
     border-radius: var(--_self-size);
     background-color: white;
     block-size: var(--_self-size);
@@ -127,6 +128,7 @@
     line-height: normal;
     font-weight: var(--_typo-weight);
     color: var(--ui-gray-700);
+    border-block-end-width: 0;
     padding-inline: var(--_pad-inline);
     box-shadow: 0 0.0625rem 0 var(--ui-gray-300);
 }

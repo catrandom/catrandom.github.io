@@ -329,7 +329,7 @@ body {
 
 .marker-one--size-s {
   --_self-size: 1.5rem;
-  --_pad-inline: 0.5rem .75rem;
+  --_pad-inline: 0.5rem 1rem;
   --_typo-size: var(--typo-xs-fs);
   --_typo-weight: 400;
   padding-block-end: 0.25rem;
@@ -350,7 +350,7 @@ body {
 @media (width <=767px) {
   .marker-one--size-s-m {
     --_self-size: 1.5rem;
-    --_pad-inline: 0.5rem .75rem;
+    --_pad-inline: 0.5rem 1rem;
     --_typo-size: var(--typo-xs-fs);
     --_typo-weight: 400;
     padding-block-end: 0.25rem;
@@ -360,7 +360,7 @@ body {
 @media (width >=768px) {
   .marker-one--size-s-m {
     --_self-size: 2rem;
-    --_pad-inline: 0.75rem 1rem;
+    --_pad-inline: 0.75rem 1.5rem;
     --_typo-size: var(--typo-m-fs);
     --_typo-weight: 400;
     padding-block-end: 0.25rem;

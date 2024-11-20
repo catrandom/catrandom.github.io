@@ -60,7 +60,7 @@
 
 @media (width >=768px) {
   .factoid-two_icon--fit-one {
-    inset-block-start: 0.5rem;
+    inset-block-start: 0.25rem;
     inline-size: 1.5rem;
   }
 }
@@ -121,7 +121,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-block: 1.625rem 2.5rem;
+    padding-block: 1.625rem 2.25rem;
     padding-inline: 1.5rem 0;
     grid-column: 1 / 7;
   }
