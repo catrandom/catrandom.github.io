@@ -245,8 +245,7 @@
             <div class="showcase-two_body-end">
               <p class="showcase-two_body-slogan line-clamp">
                 Откройте тайны своей личности с&nbsp;помощью астрологии&nbsp;&mdash; звезды могут
-                изменить жизнь незамедлительно своей личности с&nbsp;помощью астрологии&nbsp;&mdash;
-                звезды могут изменить жизнь незамедлительно
+                изменить жизнь незамедлительно своей личности с&nbsp;помощью астрологии
               </p>
             </div>
           </div>
@@ -285,7 +284,20 @@
             </picture>
           </div>
         </section>
-        <div class="promo-details__bottom" style="padding-inline: 1.5rem;">
+        <style>
+          @media (width <=767px) {
+            .promo-details__bottom {
+              margin-inline: calc(var(--layout_wrap-pad-inline-phone) * -1);
+            }
+          }
+
+          @media (width >=768px) {
+            .promo-details__bottom {
+              padding-inline: 1.5rem;
+            }
+          }
+        </style>
+        <div class="promo-details__bottom">
           <div class="promo-details__bottom-content">
             <p class="promo-details__bottom-desc">
               Помогаю осознать и&nbsp;проработать ваши слабые стороны, превращая

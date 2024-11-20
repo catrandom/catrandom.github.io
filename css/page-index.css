@@ -6,11 +6,11 @@
 @media (width <=767px) {
   .showcase-one {
     background:
-      left top / 100% auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
+      left top / 45rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
       linear-gradient(150deg, var(--primary-550) 50%, var(--primary-400));
-    padding-block: 2rem 2rem;
+    padding-block: 1.5rem 2rem;
     padding-inline: 0.75rem;
-    clip-path: polygon(0 0, 100% 0, calc(100% - var(--layout_wrap-pad-inline-phone)) 100%, 0% 100%);
+    /* clip-path: polygon(0 0, 100% 0, calc(100% - var(--layout_wrap-pad-inline-phone)) 100%, 0% 100%); */
   }
 
   .showcase-one--fit-1 {
@@ -41,7 +41,7 @@
 
 @media (width <=767px) {
   .showcase-one_title {
-    letter-spacing: -.04em;
+    letter-spacing: -.03em;
     /* margin-bottom: 0.75rem; */
     font-size: var(--typo-3xl-fs);
     line-height: 3rem;
@@ -60,17 +60,6 @@
   }
 }
 
-.showcase-one_places {
-  display: inline-block;
-  margin-left: 12px;
-  max-width: 16em;
-  vertical-align: baseline;
-  font-size: 19px;
-  line-height: 126%;
-  font-weight: 500;
-  color: white;
-}
-
 .showcase-one_speciality {
   list-style-type: none;
   font-weight: 400;
@@ -80,7 +69,7 @@
 @media (width <=767px) {
   .showcase-one_speciality {
     font-size: var(--typo-s-fs);
-    line-height: var(--typo-m-lh-s);
+    line-height: var(--typo-s-lh-m);
     font-weight: 500;
     margin-block: 0.5rem 1.5rem;
   }
@@ -208,7 +197,6 @@
 .showcase-one_features-item {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: nowrap;
   color: white;
 }
@@ -216,19 +204,21 @@
 @media (width <=767px) {
   .showcase-one_features-item {
     column-gap: 0.5rem;
+    align-items: center;
   }
 }
 
 @media (width >=768px) {
   .showcase-one_features-item {
     column-gap: 0.75rem;
+    align-items: flex-start;
   }
 }
 
 @media (width <=767px) {
   .showcase-one_features-number {
     letter-spacing: -0.03em;
-    font-size: var(--typo-3xl-fs);
+    font-size: var(--typo-2xl-fs);
     line-height: normal;
     font-weight: 300;
   }
