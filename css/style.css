@@ -615,7 +615,6 @@ body {
 
 .card-one_real {
   flex-shrink: 0;
-  margin-block-start: -0.5rem;
 }
 
 .card-one_real .noticer-one {
