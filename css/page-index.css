@@ -239,9 +239,9 @@
   .showcase-one_features-text {
     display: block;
     padding-block-start: 0.5rem;
-    font-size: var(--typo-m-fs);
-    line-height: 1.5rem;
-    font-weight: 400;
+    font-size: var(--typo-s-fs);
+    line-height: 1.25rem;
+    font-weight: 500;
   }
 }
 
