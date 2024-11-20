@@ -16,7 +16,7 @@
   .factoid-two_value {
     letter-spacing: -.03em;
     font-size: var(--typo-3xl-fs);
-    line-height: 3.5rem;
+    line-height: 3.25rem;
     font-weight: 200;
   }
 }
@@ -43,7 +43,7 @@
   .factoid-two_label {
     font-size: var(--typo-s-fs);
     line-height: var(--typo-s-lh-s);
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -246,9 +246,11 @@
   flex-wrap: wrap;
 }
 
-.showcase-two_body-wrap--fit-1 {
-  margin-block-start: .5rem;
-  column-gap: 1rem;
+@media (width >=768px) {
+  .showcase-two_body-wrap--fit-1 {
+    margin-block-start: .5rem;
+    column-gap: 1.25rem;
+  }
 }
 
 .showcase-two_body-wrap--fit-2 {

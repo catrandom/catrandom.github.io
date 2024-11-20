@@ -56,7 +56,7 @@
     line-height: 4.75rem;
     font-weight: 200;
     grid-area: 1 / 1 / 2 / span 9;
-    align-self: end;
+    /* align-self: end; */
   }
 }
 
@@ -96,8 +96,9 @@
 
 @media (width >=768px) {
   .showcase-one_speciality {
-    margin-block-start: -0.75rem;
-    background-image: linear-gradient(to bottom, white 60%, var(--primary-500));
+    position: absolute;
+    inset-block-start: 1rem;
+    background-image: linear-gradient(to bottom, white 50%, var(--primary-500) 110%);
     -webkit-background-clip: text;
     letter-spacing: -.02em;
     font-size: var(--typo-l-fs);
