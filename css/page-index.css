@@ -92,8 +92,8 @@
     letter-spacing: -.02em;
     font-size: var(--typo-l-fs);
     line-height: 2rem;
-    font-weight: 400;
-    grid-column: 10 / -1;
+    font-weight: 500;
+    grid-column: 9 / -1;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -109,7 +109,7 @@
     flex-direction: column;
     align-items: flex-start;
     max-inline-size: 13em;
-    padding-inline-start: 1.5rem;
+    padding-inline-start: 1rem;
     row-gap: 0.75rem;
   }
 }
@@ -127,28 +127,25 @@
   inline-size: auto;
 }
 
-@media (width <= 767px) {
+@media (width <=767px) {
   .showcase-one_cta-icon {
     inset-block-start: -0.25rem;
     inset-inline-start: -1rem;
     block-size: 0.875rem;
-
   }
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .showcase-one_cta-icon {
-    inset-block-start: -0.25rem;
-    inset-inline-start: -1rem;
-    block-size: 1rem;
-
+    inset-block-start: -0.5rem;
+    inset-inline-start: -1.25rem;
+    block-size: 1.25rem;
   }
 }
 
 .showcase-one_cta-label {
   text-transform: lowercase;
   color: white;
-text-align: center;
 }
 
 @media (width <=767px) {
@@ -161,18 +158,15 @@ text-align: center;
 
 @media (width >=768px) {
   .showcase-one_cta-label {
-    position: relative;
-    margin-block-start: -0.125rem;
+    max-inline-size: 9em;
     font-size: var(--typo-m-fs);
     line-height: var(--typo-m-lh-s);
   }
 }
 
-
 .showcase-one_cta-label span {
   position: relative;
 }
-
 
 .showcase-one_cta-btn {
   white-space: nowrap;
@@ -182,7 +176,7 @@ text-align: center;
   .showcase-one_cta-btn {
     /* margin-top: 1.25rem; */
     /* margin-left: 0.75rem; */
-    inline-size: 100%;
+    min-inline-size: 10rem;
   }
 }
 
@@ -221,29 +215,29 @@ text-align: center;
 
 @media (width <=767px) {
   .showcase-one_features-item {
-    column-gap: 0.5rem;
     align-items: center;
+    column-gap: 0.5rem;
   }
 }
 
 @media (width >=768px) {
   .showcase-one_features-item {
-    column-gap: 0.75rem;
     align-items: flex-start;
+    column-gap: 0.75rem;
   }
 }
 
 @media (width <=767px) {
   .showcase-one_features-number {
     letter-spacing: -0.03em;
-    font-size: var(--typo-2xl-fs);
-    line-height: normal;
+    font-size: var(--typo-xl-fs);
+    line-height: 2.5rem;
     font-weight: 300;
   }
 
   .showcase-one_features-text {
-    font-size: var(--typo-s-fs);
-    line-height: 1.25rem;
+    font-size: var(--typo-xs-fs);
+    line-height: 1rem;
     font-weight: 500;
   }
 }
@@ -251,8 +245,8 @@ text-align: center;
 @media (width >=768px) {
   .showcase-one_features-number {
     letter-spacing: -0.05em;
-    font-size: var(--typo-5xl-fs);
-    line-height: 4.75rem;
+    font-size: var(--typo-4xl-fs);
+    line-height: 4.25rem;
     font-weight: 200;
   }
 

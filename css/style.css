@@ -457,8 +457,8 @@ body {
 }
 
 .noticer-one--size-m {
-  --_self-size: 2.25rem;
-  --_icon-size: 2rem;
+  --_self-size: 2rem;
+  --_icon-size: 1.75rem;
 }
 
 @media (width <=767px) {
@@ -470,8 +470,8 @@ body {
 
 @media (width >=768px) {
   .noticer-one--size-s-m {
-    --_self-size: 2.25rem;
-    --_icon-size: 2rem;
+    --_self-size: 2rem;
+    --_icon-size: 1.75rem;
   }
 }
 
