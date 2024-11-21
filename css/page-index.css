@@ -6,7 +6,7 @@
 @media (width <=767px) {
   .showcase-one {
     background:
-      left top / 45rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
+      left top / 38rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
       linear-gradient(150deg, var(--primary-550) 50%, var(--primary-400));
     padding-block: 1.5rem 2rem;
     padding-inline: 0.75rem;
@@ -43,8 +43,8 @@
   .showcase-one_title {
     letter-spacing: -.03em;
     /* margin-bottom: 0.75rem; */
-    font-size: var(--typo-3xl-fs);
-    line-height: 3rem;
+    font-size: var(--typo-2xl-fs);
+    line-height: 2.5rem;
     font-weight: 300;
   }
 }
@@ -71,7 +71,7 @@
     font-size: var(--typo-s-fs);
     line-height: var(--typo-s-lh-m);
     font-weight: 500;
-    margin-block: 0.5rem 1.5rem;
+    margin-block: 0.5rem 1.25rem;
   }
 
   .showcase-one_speciality li {
@@ -107,8 +107,8 @@
 @media (width <=767px) {
   .showcase-one_cta {
     flex-direction: column;
-    align-items: center;
-    max-inline-size: 17em;
+    align-items: flex-start;
+    max-inline-size: 13em;
     padding-inline-start: 1.5rem;
     row-gap: 0.75rem;
   }
@@ -124,26 +124,38 @@
 
 .showcase-one_cta-icon {
   position: absolute;
-  inset-block-start: -0.25rem;
-  inset-inline-start: -1rem;
-  block-size: 1rem;
   inline-size: auto;
+}
+
+@media (width <= 767px) {
+  .showcase-one_cta-icon {
+    inset-block-start: -0.25rem;
+    inset-inline-start: -1rem;
+    block-size: 0.875rem;
+
+  }
+}
+
+@media (width >= 768px) {
+  .showcase-one_cta-icon {
+    inset-block-start: -0.25rem;
+    inset-inline-start: -1rem;
+    block-size: 1rem;
+
+  }
 }
 
 .showcase-one_cta-label {
   text-transform: lowercase;
-  text-align: center;
   color: white;
-}
-
-.showcase-one_cta-label span {
-  position: relative;
+text-align: center;
 }
 
 @media (width <=767px) {
   .showcase-one_cta-label {
-    font-size: var(--typo-m-fs);
-    line-height: var(--typo-m-lh-s);
+    font-size: var(--typo-xs-fs);
+    line-height: var(--typo-xs-lh-s);
+    font-weight: 500;
   }
 }
 
@@ -155,6 +167,12 @@
     line-height: var(--typo-m-lh-s);
   }
 }
+
+
+.showcase-one_cta-label span {
+  position: relative;
+}
+
 
 .showcase-one_cta-btn {
   white-space: nowrap;
@@ -182,7 +200,7 @@
   .showcase-one_features {
     display: flex;
     flex-wrap: wrap;
-    margin-block-start: 1.5rem;
+    margin-block-start: 1.25rem;
     gap: 1rem;
   }
 }

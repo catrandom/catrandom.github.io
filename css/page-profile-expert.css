@@ -128,7 +128,7 @@
 @media (width <=767px) {
   .showcase-two_body {
     background:
-      left top / 45rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
+      left top / 38rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
       linear-gradient(150deg, var(--primary-550) 50%, var(--primary-400));
     padding-block: 1.5rem 2rem;
     padding-inline: 0.75rem;
