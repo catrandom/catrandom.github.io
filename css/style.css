@@ -452,7 +452,7 @@ body {
 }
 
 .noticer-one--size-s {
-  --_self-size: 1.5rem;
+  --_self-size: 2rem;
   --_icon-size: 1.25rem;
 }
 
@@ -463,7 +463,7 @@ body {
 
 @media (width <=767px) {
   .noticer-one--size-s-m {
-    --_self-size: 1.5rem;
+    --_self-size: 2rem;
     --_icon-size: 1.25rem;
   }
 }
@@ -649,7 +649,7 @@ body {
 }
 
 .card-one_body-wrap--fit-1 {
-  column-gap: 0.25rem;
+  column-gap: 0;
 }
 
 .card-one_body-wrap--fit-2 {
