@@ -175,11 +175,12 @@
 
 @media (width <=767px) {
   .showcase-two_title--fit-2 {
+    --_clamp-amount: 4;
     font-size: var(--typo-l-fs);
     /* line-height: var(--typo-l-lh-s); */
     line-height: 2rem;
     font-weight: 400;
-    margin-block: 0.25rem 0.75rem;
+    margin-block: 0.25rem 0.25rem;
   }
 }
 
