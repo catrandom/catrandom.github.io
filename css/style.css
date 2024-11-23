@@ -323,7 +323,11 @@ body {
   --_bg-fill: linear-gradient(to right, var(--ui-gray-600) 50%, var(--ui-gray-500));
 }
 
-.marker-one--theme-accent {
+.marker-one--theme-vip {
+  --_bg-fill: linear-gradient(to right, #bf740a 50%, #d88614);
+}
+
+.marker-one--theme-top {
   --_bg-fill: linear-gradient(to right, #bf740a 50%, #d88614);
 }
 
@@ -340,7 +344,7 @@ body {
   margin-inline-end: calc(var(--_clip-path-pad) * -1);
 }
 
-.marker-one--size-s:is(.marker-one--theme-accent) {
+.marker-one--size-s:is(.marker-one--theme-vip) {
   --_typo-size: var(--typo-2xs-fs);
   --_typo-weight: 500;
   padding-block-end: 0;
@@ -357,6 +361,11 @@ body {
   }
 }
 
+.marker-one--theme-accent {
+  padding-block-end: 0;
+  text-transform: uppercase;
+}
+
 @media (width >=768px) {
   .marker-one--size-s-m {
     --_self-size: 2rem;
@@ -370,8 +379,6 @@ body {
   .marker-one--size-s-m:is(.marker-one--theme-accent) {
     --_typo-size: var(--typo-s-fs);
     --_typo-weight: 500;
-    padding-block-end: 0;
-    text-transform: uppercase;
   }
 }
 
@@ -826,7 +833,7 @@ body {
 .chat-unit {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  row-gap: .5rem;
 }
 
 @media (width >=768px) {
@@ -874,7 +881,7 @@ body {
 
   .chat-unit_bubble-text {
     font-size: var(--typo-s-fs);
-    line-height: var(--typo-s-lh-s);
+    line-height: 1.5rem;
     font-weight: 500;
     color: var(--ui-gray-600);
   }

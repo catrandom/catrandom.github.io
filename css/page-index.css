@@ -8,7 +8,7 @@
     background:
       left top / 38rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
       linear-gradient(150deg, var(--primary-550) 50%, var(--primary-400));
-    padding-block: 1.5rem 2rem;
+    padding-block: 1.5rem 1.75rem;
     padding-inline: 0.75rem;
     /* clip-path: polygon(0 0, 100% 0, calc(100% - var(--layout_wrap-pad-inline-phone)) 100%, 0% 100%); */
   }
@@ -27,7 +27,7 @@
       left top / 75rem auto no-repeat url("/assets/images/showcase-bg-one_desktop.png?v4"),
       radial-gradient(circle at top left, var(--primary-550) 50%, var(--primary-400));
     /* grid-auto-rows: max-content; */
-    min-block-size: 31.25rem;
+    min-block-size: 30rem;
     gap: 2rem 1.5rem;
     padding-block: 1.5rem 2rem;
     padding-inline: 1.5rem;
@@ -71,7 +71,7 @@
     font-size: var(--typo-s-fs);
     line-height: var(--typo-s-lh-m);
     font-weight: 500;
-    margin-block: 0.5rem 1.25rem;
+    margin-block: 0.5rem 1rem;
   }
 
   .showcase-one_speciality li {
@@ -93,7 +93,7 @@
     font-size: var(--typo-l-fs);
     line-height: 2rem;
     font-weight: 500;
-    grid-column: 9 / -1;
+    grid-column: 10 / -1;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -110,14 +110,14 @@
     align-items: flex-start;
     max-inline-size: 13em;
     padding-inline-start: 1rem;
-    row-gap: 0.75rem;
+    row-gap: 0.5rem;
   }
 }
 
 @media (width >=768px) {
   .showcase-one_cta {
     padding-inline-start: 1.5rem;
-    column-gap: 20px;
+    column-gap: 1rem;
     grid-column: 1 / 7;
   }
 }
@@ -158,6 +158,7 @@
 
 @media (width >=768px) {
   .showcase-one_cta-label {
+    margin-block-start: -.5rem;
     max-inline-size: 9em;
     font-size: var(--typo-m-fs);
     line-height: var(--typo-m-lh-s);
@@ -182,7 +183,7 @@
 
 @media (width >=768px) {
   .showcase-one_cta-btn {
-    min-inline-size: 12.5rem;
+    min-inline-size: 10rem;
   }
 }
 
@@ -194,8 +195,8 @@
   .showcase-one_features {
     display: flex;
     flex-wrap: wrap;
-    margin-block-start: 1.25rem;
-    gap: 1rem;
+    margin-block-start: 1rem;
+    gap: .75rem;
   }
 }
 
@@ -252,7 +253,7 @@
 
   .showcase-one_features-text {
     display: block;
-    padding-block-start: 0.5rem;
+    padding-block-start: 0.625rem;
     font-size: var(--typo-s-fs);
     line-height: 1.25rem;
     font-weight: 500;
@@ -267,7 +268,6 @@
 
 @media (width >=768px) {
   .showcase-one_chat {
-    padding-block-end: 0.75rem;
     grid-row: 2 / -1;
     grid-column: span 6 / -1;
   }
