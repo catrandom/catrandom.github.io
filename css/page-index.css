@@ -71,7 +71,7 @@
     font-size: var(--typo-s-fs);
     line-height: var(--typo-s-lh-m);
     font-weight: 500;
-    margin-block: 0.5rem .75rem;
+    margin-block: 0.5rem 1rem;
   }
 
   .showcase-one_speciality li {
@@ -110,7 +110,7 @@
     align-items: flex-start;
     max-inline-size: 13em;
     padding-inline-start: 1.25rem;
-    row-gap: 0.5rem;
+    row-gap: 0.75rem;
   }
 }
 
@@ -129,8 +129,8 @@
 
 @media (width <=767px) {
   .showcase-one_cta-icon {
-    inset-block-start: -0.5rem;
-    inset-inline-start: -0.875rem;
+    inset-block-start: -0.375rem;
+    inset-inline-start: -0.75rem;
     block-size: 0.875rem;
   }
 }
@@ -195,7 +195,7 @@
   .showcase-one_features {
     display: flex;
     flex-wrap: wrap;
-    margin-block-start: 1rem;
+    margin-block-start: 1.5rem;
     gap: .75rem;
   }
 }
@@ -216,7 +216,7 @@
 
 @media (width <=767px) {
   .showcase-one_features-item {
-    align-items: center;
+    align-items: flex-start;
     column-gap: 0.25rem;
   }
 }
@@ -231,12 +231,13 @@
 @media (width <=767px) {
   .showcase-one_features-number {
     letter-spacing: -0.03em;
-    font-size: var(--typo-xl-fs);
+    font-size: var(--typo-2xl-fs);
     line-height: 2.5rem;
     font-weight: 300;
   }
 
   .showcase-one_features-text {
+    margin-block-start: -0.25rem;
     font-size: var(--typo-xs-fs);
     line-height: 1rem;
     font-weight: 500;
