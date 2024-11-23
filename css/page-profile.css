@@ -129,7 +129,7 @@
     background:
       left top / 38rem auto no-repeat url("/assets/images/showcase-bg-one_phone.png?v4"),
       linear-gradient(150deg, var(--primary-550) 50%, var(--primary-400));
-    padding-block: 1rem 2rem;
+    padding-block: 1.5rem 2rem;
     padding-inline: 0.75rem;
   }
 }
@@ -158,9 +158,9 @@
   .showcase-two_title--fit-1 {
     letter-spacing: -.03em;
     /* margin-bottom: 0.75rem; */
-    font-size: var(--typo-2xl-fs);
-    line-height: 3.25rem;
-    font-weight: 300;
+    font-size: var(--typo-xl-fs);
+    line-height: 2.5rem;
+    font-weight: 400;
   }
 }
 

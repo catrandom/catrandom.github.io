@@ -43,9 +43,9 @@
   .showcase-one_title {
     letter-spacing: -.03em;
     /* margin-bottom: 0.75rem; */
-    font-size: var(--typo-2xl-fs);
+    font-size: var(--typo-xl-fs);
     line-height: 2.5rem;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
