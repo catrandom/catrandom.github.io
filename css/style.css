@@ -308,11 +308,31 @@ body {
   align-items: center;
   background: var(--_bg-fill);
   block-size: var(--_self-size);
+  padding-block-end: 0.25rem;
   font-size: var(--_typo-size);
   line-height: normal;
   font-weight: var(--_typo-weight);
   padding-inline: var(--_pad-inline);
   clip-path: polygon(0 0, 100% 0, calc(100% - var(--_clip-path-pad)) 100%, 0% 100%);
+}
+
+.marker-one--size-s {
+  --_self-size: 1.5rem;
+  --_pad-inline: 0.5rem 1rem;
+  --_typo-size: var(--typo-xs-fs);
+  --_typo-weight: 400;
+}
+
+.marker-one--size-m {
+  --_self-size: 1.75rem;
+  --_pad-inline: 0.5rem 1rem;
+  --_typo-size: var(--typo-s-fs);
+  --_typo-weight: 400;
+  letter-spacing: -.02em;
+}
+
+.marker-one + .marker-one {
+  margin-inline-end: calc(var(--_clip-path-pad) * -1);
 }
 
 .marker-one--theme-online {
@@ -325,61 +345,14 @@ body {
 
 .marker-one--theme-vip {
   --_bg-fill: linear-gradient(to right, #bf740a 50%, #d88614);
+  padding-block-end: 0.125rem;
+  letter-spacing: .01em;
 }
 
 .marker-one--theme-top {
   --_bg-fill: linear-gradient(to right, #ae0985 50%, #d714a6);
-}
-
-.marker-one--size-s {
-  --_self-size: 1.5rem;
-  --_pad-inline: 0.5rem 1rem;
-  --_typo-size: var(--typo-xs-fs);
-  --_typo-weight: 400;
-  padding-block-end: 0.25rem;
-}
-
-.marker-one--size-s + .marker-one--size-s,
-.marker-one--size-s-m + .marker-one--size-s-m {
-  margin-inline-end: calc(var(--_clip-path-pad) * -1);
-}
-
-.marker-one--size-s:is(.marker-one--theme-vip) {
-  --_typo-size: var(--typo-2xs-fs);
-  --_typo-weight: 500;
-  padding-block-end: 0;
-  text-transform: uppercase;
-}
-
-@media (width <=767px) {
-  .marker-one--size-s-m {
-    --_self-size: 1.5rem;
-    --_pad-inline: 0.5rem 1rem;
-    --_typo-size: var(--typo-xs-fs);
-    --_typo-weight: 400;
-    padding-block-end: 0.25rem;
-  }
-}
-
-.marker-one--theme-accent {
-  padding-block-end: 0;
-  text-transform: uppercase;
-}
-
-@media (width >=768px) {
-  .marker-one--size-s-m {
-    --_self-size: 2rem;
-    --_pad-inline: 0.75rem 1.5rem;
-    --_typo-size: var(--typo-m-fs);
-    --_typo-weight: 400;
-    padding-block-end: 0.25rem;
-    letter-spacing: -.02em;
-  }
-
-  .marker-one--size-s-m:is(.marker-one--theme-accent) {
-    --_typo-size: var(--typo-s-fs);
-    --_typo-weight: 500;
-  }
+  padding-block-end: 0.125rem;
+  letter-spacing: .01em;
 }
 
 .marker-set {
