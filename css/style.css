@@ -432,7 +432,7 @@ body {
 }
 
 .noticer-one--size-s {
-  --_self-size: 2rem;
+  --_self-size: 1.75rem;
   --_icon-size: 1.25rem;
 }
 
@@ -595,6 +595,7 @@ body {
 
 .card-one_real {
   flex-shrink: 0;
+  font-size: 0;
 }
 
 .card-one_real .noticer-one {
